@@ -11,5 +11,10 @@ head{
 body{
     font-family: Arial, Helvetica, sans-serif;
     font-size: medium;
-    color:black
+    color:black;
 }
+
+::backdrop{
+    background:blue;
+}
+<img src="c:\Users\sterl\Downloads\jellyfish.avif" alt="This is a picture." height="500" wedth="500>"
