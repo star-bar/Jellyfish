@@ -2,26 +2,48 @@
 making the page look pretty n work well-sterling.
 */
 
-h1{
-    color:black;
-    font-size: larger;
-}
-
 *{
-    color:rgb(74, 104, 164);
+    color:rgb(1, 7, 20);
     font-family: Arial, Helvetica, sans-serif;
 }
-
-html,body{
+body,html{
     height: 100%;
     margin: 0px;
+    background-color: rgb(56, 90, 128);
 }
-
-bg{
-    background-image: url(jellyfish.avif);
-    height: 100%;
+h1 {
+    color:rgb(33, 47, 149);
+    font: size 8cm;
+    margin: 0;
+    padding: 0.5cm;
+}
+p {
+    padding:1cm;
+    font-size:smaller;
+}
+#bg{
+    background-image:url(jellyfish.avif);
+    height:100%;
     background-position: center;
     background-repeat: no-repeat;
+    background-size:cover;
 }
-
-<link rel="stylesheet" href="https://www.montereybayaquarium.org/animals-the-ocean/animals-a-to-z/jellies">
+.panel{ 
+    width:75%;
+    height:auto;
+    margin-right:auto;
+    margin-left:auto;
+    padding:1cm;
+    background-color:rgb(139, 116, 101);
+    border: radius 10px;
+}
+#species-list{
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    width:80%;
+    margin: bottom 2cm;
+}
+#imagine-container{
+    display:none;
+}
