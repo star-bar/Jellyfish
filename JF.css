@@ -11,9 +11,15 @@ body,html{
     margin: 0px;
     background-color: rgb(56, 90, 128);
 }
+h4{
+    font-size: 1cm;
+    color: rgb(72, 53, 11);
+    padding: 0.2cm ;
+    position: middle;
+}
 h1 {
     color:rgb(33, 47, 149);
-    font: size 8cm;
+    font-size: x-large;
     margin: 0;
     padding: 0.5cm;
 }
@@ -21,7 +27,17 @@ p {
     padding:1cm;
     font-size:smaller;
 }
+h2 {
+    font-size: smaller;
+    color: rgb(8, 8, 45);
+
+}
+h3{
+    font-size: smaller;
+    color: rgb(8, 8, 45);
+}
 #bg{
+    background: radial-gradient(circle, #1d3557, #457b9d);
     background-image:url(jellyfish.avif);
     height:100%;
     background-position: center;
@@ -34,16 +50,69 @@ p {
     margin-right:auto;
     margin-left:auto;
     padding:1cm;
-    background-color:rgb(139, 116, 101);
-    border: radius 10px;
+    background-color:rgb(139, 116, 101, 0.8);
+    border-radius: 10px;
 }
 #species-list{
     display:block;
     margin-left:auto;
     margin-right:auto;
     width:80%;
-    margin: bottom 2cm;
+    margin-bottom: 2cm;
 }
-#imagine-container{
-    display:none;
+#image-container{
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  background-color: rgba(139, 116, 101, 0.95);
+  padding: 35px 20px 20px 20px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  width: 90%;
+  max-width: 450px;
+}
+#Jellyfish {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  max-height: 350px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
+}
+#image-container::after {
+    content: "Change choice in dropdown to switch pictures";
+    display: block;
+    font-size: 12px;
+    color: rgb(50, 50, 50);
+    margin-top: 10px; 
+}
+#close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 32px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    padding: 0;
+    line-height: 1;
+    z-index: 9999;
+}
+#close-btn:hover {
+    color: #457b9d;
+}
+#Jellyfish-title {
+    font-size: 1.5rem;
+    color: rgb(4, 6, 19);
+    margin-top: 10px;
+    margin-bottom: 20px;
+    text-shadow: gray;
+    text-align: center;
 }

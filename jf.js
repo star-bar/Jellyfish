@@ -1,36 +1,78 @@
 /*
-trying to get it to mold to the html and csss for JF for GB-sterling.
+had to redo because i could not find an API for it, ended p making my own list, which is not ideal. 
+had to add in the window clicker because the other way i was learning did not end up working, i will be trying to learn what messed up, but it didnt seem like anything i could find was.
 */
+const jellyfishSpecies = [
+    "Bell Jelly",
+    "Black Sea Nettle jelly",
+    "Blubber Jelly",
+    "Bloody-belly Comb Jelly",
+    "Crystal Jelly",
+    "Comb Jelly",
+    "Midwater Jelly",
+    "Purple-striped Jelly",
+    "Mediterranean Jelly",
+    "Moon Jelly"
+];
 
-//variables
-const speciesListURL = "https://www.montereybayaquarium.org/animals-the-ocean/animals-a-to-z/jellies#types";
-const speciesList = document.getElementById("species.list");
+const speciesList = document.getElementById("species-list");
+const imageContainer = document.getElementById("image-container")  || document.getElementById("image-contaner");
+const jellyfishImg = document.getElementById("Jellyfish") || document.getElementById("jellyfish");
+const closeBtn = document.getElementById("close-btn");
 
-//when the page loads
-window.addEventListener("load",updateSpeciesList);
 
-//retrieve the list of jelly from api
-async function getSpeciesList(){
-   return fetch(speciesListURL).then(response => response.json());
+window.addEventListener("load", populateSpeciesList);
+if (speciesList) {
+speciesList.addEventListener("change", displayJellyfishImage);
 }
-//add species drop down list 
-function updateSpeciesList(){
-    getSpeciesList().then(function(data){
+if (closeBtn) {
+    closeBtn.addEventListener("click", hideJellyfishImage);
+}
 
-         //get species name
-         for(element in data.message){
-         //append to the select list
-         let option = createOption(element);
-         speciesList.appendChild(option);
-         }
+function populateSpeciesList() {
+    if (!speciesList) return;
+    jellyfishSpecies.forEach((name, index) => {
+        let option = document.createElement("option");
+        option.textContent = name;
+        option.value = index + 1;
+        speciesList.appendChild(option);
+    
+    });
+}
+
+function displayJellyfishImage() {
+    const selectedValue = speciesList.value;
+
+    const jellyfishTitle = document.getElementById("Jellyfish-title");
+
+    if (selectedValue && jellyfishImg && imageContainer) {
+        console.log("Dropdown changed! Chosen number value is:", selectedValue);
+
+        if (jellyfishTitle) {
+            jellyfishTitle.textContent = speciesList.options[speciesList.selectedIndex].text;
+        }
+
+        jellyfishImg.src = "jelly " + selectedValue + ".jpg";
+
+        imageContainer.style.display = "block";
+        imageContainer.style.opacity = "1";
+        imageContainer.style.visibility = "visible";
+    } else {
+        if (imageContainer) imageContainer.style.display ="none";
     }
     
+  window.hideJellyfishImage = function() {
+    console.log("Close button was physically clicked!");
 
-    );
-}
+    const currentList = document.getElementById("species-list");
+    const currentContainer = document.getElementById("image-container");
 
-function createOption(text){
-    let option = document.createElement("option");
-    option.textContent = text;
-    return option;
+    if (currentList) {
+        currentList.value = "";
+    }
+    if (currentContainer) {
+        currentContainer.style.display ="none";
+
+    }
+  };
 }

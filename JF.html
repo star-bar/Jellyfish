@@ -9,18 +9,34 @@
         <meta charset=UTF-8>
         <link rel="stylesheet" href="JF.css">
    </head>
-
    <body>
        <div id="bg"> 
-          <h1> Did you know, Jellyfish have no brain, blood, or heart, but have been around for over 500 million years? </h1>
-          <div class="panel">
+        <div class="panel">
+        <h4>Jellyfish</h4>
+        <h1> "Did you know, Jellyfish have no brain, blood, or heart, but have been around for over 500 million years?" </h1> 
              <p> If you want to see more, check out the list below</p>
-             <select name="species" id="species.list" > 
-        </div > 
-        <div id="image contaner" class="panel"> 
-            <img id="Jellyfish">
+            
+             <select name="species" id="species-list">
+                <option value="">-- Select a Jellyfish --</option>
+             </select> 
+
+             <div>
+             <h2> The "Jellies" are any animals that have a gelatinous body and live in the water column. They are called gelatinous zooplankton, or just "gelata" for short. Their bodies are made up of more than 95 percent water. Graceful and sometimes dangerous, jellies range in size from miniscule to enormous. One of the largest, the lion’s mane jelly, has a giant-sized bell eight feet (2.4 m) across. Its flowing tentacles can reach 100 feet (30.5 m) or more—longer than two school buses parked end-to-end! Despite their unique and varied physiology, jellies thrive throughout the world's ocean.</h2>
+             </div>
+
+            <div>
+              <h3>Jelly anatomy; Jellies are composed of three layers: the epidermis, which is the outer layer; the mesoglea, a middle layer made up of a thick, elastic, jelly-like substance; and the inner layer known as the endoderm gastrodermis. Often, their bodies have radial symmetry, which means that a jelly’s body parts branch out from its center much like the spokes of a wheel. In other instances, like with Ctenophores, the animals have biradial symmetry—when it’s divided along an axis, the two halves of its body are mirror images of each other." - Monterey Bay Aquarium.  </h3>   
+            </div>
+        </div> 
+
+
+        <div id="image-container" class="panel"> 
+            <button id="close-btn" onclick="hideJellyfishImage()">&times;</button>
+            <h2 id="Jellyfish-title"> Jellyfish Name</h2>
+            <img id="Jellyfish"  alt="Jellyfish display">
         </div>
        </div>  
-    </body>
+
+        <script src="jf.js"></script>
+</body>
 </html>
-<script scr="jf.js"></script>
