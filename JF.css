@@ -13,8 +13,10 @@ body,html{
 }
 h4{
     font-size: 1cm;
-    color: rgb(72, 53, 11);
+    color: rgb(5, 4, 1);
     padding: 0.2cm ;
+    margin-left: 40%;
+    margin-right: 50%;
     position: middle;
 }
 h1 {
@@ -113,6 +115,5 @@ h3{
     color: rgb(4, 6, 19);
     margin-top: 10px;
     margin-bottom: 20px;
-    text-shadow: gray;
     text-align: center;
 }
