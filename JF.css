@@ -20,12 +20,12 @@ h4{
     position: middle;
     animation: glowLoop 4s ease-in-out infinite alternate;
 }
-@keyframes glowloop {
+@keyframes glowLoop {
     0% {
         color: rgb(5, 4, 1);
     }
   100% {
-    color:rgb(56, 90, 128);
+    color: rgb(15, 46, 81);
   }  
 }
 h1 {
